@@ -3,11 +3,12 @@ import ExploreContainer from '../components/ExploreContainer';
 import './Home.css';
 
 const Home: React.FC = () => {
+	console.log('fsddfas')
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
-          <IonTitle>Blank</IonTitle>
+        <IonToolbar color={'secondary'}>
+          <IonTitle>Testttttt</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>

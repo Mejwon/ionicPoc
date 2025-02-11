@@ -8,11 +8,24 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   plugins: [
     react(),
-    legacy()
   ],
   test: {
     globals: true,
     environment: 'jsdom',
     setupFiles: './src/setupTests.ts',
-  }
+  },
+	esbuild: {
+    target: "esnext", // Change from es2020 to esnext
+  },
+  build: {
+		target: ['esnext'],
+		commonjsOptions: {
+      transformMixedEsModules: true,
+    },
+  },
+	optimizeDeps: {
+		esbuildOptions: {
+			target: "esnext",
+		}
+	},
 })
